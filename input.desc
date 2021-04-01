@@ -1,0 +1,26 @@
+data class Pessoa(
+	String primeiroNome, String sobrenome, 
+	Endereco endereco,
+	int idade
+);
+
+data class Endereco(
+	String rua, int numero, 
+	String complemento, String bairro,
+	String cep, String cidade, 
+	String estato, String pais 
+);
+
+data class Produto(
+   String descricao,
+   float preco,
+   int quantidade
+);
+
+data class Ponto(
+	float x,
+	float y, 
+	float z
+);
+
+
