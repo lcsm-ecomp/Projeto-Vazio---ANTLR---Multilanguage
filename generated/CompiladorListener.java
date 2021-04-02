@@ -1,4 +1,4 @@
-// Generated from Compilador.e4 by ANTLR 4.8
+// Generated from Compilador.e4 by ANTLR 4.9.2
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -27,13 +27,13 @@ public interface CompiladorListener extends ParseTreeListener {
 	 */
 	void exitClasse(CompiladorParser.ClasseContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link CompiladorParser#var}.
+	 * Enter a parse tree produced by {@link CompiladorParser#dvar}.
 	 * @param ctx the parse tree
 	 */
-	void enterVar(CompiladorParser.VarContext ctx);
+	void enterDvar(CompiladorParser.DvarContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link CompiladorParser#var}.
+	 * Exit a parse tree produced by {@link CompiladorParser#dvar}.
 	 * @param ctx the parse tree
 	 */
-	void exitVar(CompiladorParser.VarContext ctx);
+	void exitDvar(CompiladorParser.DvarContext ctx);
 }

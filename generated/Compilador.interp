@@ -23,7 +23,7 @@ SPACE
 rule names:
 programa
 classe
-var
+dvar
 
 
 atn:

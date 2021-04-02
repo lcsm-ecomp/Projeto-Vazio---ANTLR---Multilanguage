@@ -1,4 +1,4 @@
-// Generated from Compilador.e4 by ANTLR 4.8
+// Generated from Compilador.e4 by ANTLR 4.9.2
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -39,13 +39,13 @@ public class CompiladorBaseListener implements CompiladorListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterVar(CompiladorParser.VarContext ctx) { }
+	@Override public void enterDvar(CompiladorParser.DvarContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitVar(CompiladorParser.VarContext ctx) { }
+	@Override public void exitDvar(CompiladorParser.DvarContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

@@ -1,4 +1,4 @@
-// Generated from Compilador.e4 by ANTLR 4.8
+// Generated from Compilador.e4 by ANTLR 4.9.2
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class CompiladorParser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.8", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.9.2", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -18,10 +18,10 @@ public class CompiladorParser extends Parser {
 	public static final int
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, ID=7, SPACE=8;
 	public static final int
-		RULE_programa = 0, RULE_classe = 1, RULE_var = 2;
+		RULE_programa = 0, RULE_classe = 1, RULE_dvar = 2;
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"programa", "classe", "var"
+			"programa", "classe", "dvar"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
@@ -148,11 +148,11 @@ public class CompiladorParser extends Parser {
 
 	public static class ClasseContext extends ParserRuleContext {
 		public TerminalNode ID() { return getToken(CompiladorParser.ID, 0); }
-		public List<VarContext> var() {
-			return getRuleContexts(VarContext.class);
+		public List<DvarContext> dvar() {
+			return getRuleContexts(DvarContext.class);
 		}
-		public VarContext var(int i) {
-			return getRuleContext(VarContext.class,i);
+		public DvarContext dvar(int i) {
+			return getRuleContext(DvarContext.class,i);
 		}
 		public ClasseContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -184,7 +184,7 @@ public class CompiladorParser extends Parser {
 			setState(17);
 			match(T__2);
 			setState(18);
-			var();
+			dvar();
 			setState(23);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
@@ -194,7 +194,7 @@ public class CompiladorParser extends Parser {
 				setState(19);
 				match(T__3);
 				setState(20);
-				var();
+				dvar();
 				}
 				}
 				setState(25);
@@ -218,28 +218,28 @@ public class CompiladorParser extends Parser {
 		return _localctx;
 	}
 
-	public static class VarContext extends ParserRuleContext {
+	public static class DvarContext extends ParserRuleContext {
 		public List<TerminalNode> ID() { return getTokens(CompiladorParser.ID); }
 		public TerminalNode ID(int i) {
 			return getToken(CompiladorParser.ID, i);
 		}
-		public VarContext(ParserRuleContext parent, int invokingState) {
+		public DvarContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_var; }
+		@Override public int getRuleIndex() { return RULE_dvar; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).enterVar(this);
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).enterDvar(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).exitVar(this);
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).exitDvar(this);
 		}
 	}
 
-	public final VarContext var() throws RecognitionException {
-		VarContext _localctx = new VarContext(_ctx, getState());
-		enterRule(_localctx, 4, RULE_var);
+	public final DvarContext dvar() throws RecognitionException {
+		DvarContext _localctx = new DvarContext(_ctx, getState());
+		enterRule(_localctx, 4, RULE_dvar);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{

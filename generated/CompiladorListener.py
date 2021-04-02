@@ -1,4 +1,4 @@
-# Generated from Compilador.e4 by ANTLR 4.8
+# Generated from Compilador.e4 by ANTLR 4.9.2
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .CompiladorParser import CompiladorParser
@@ -26,12 +26,12 @@ class CompiladorListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by CompiladorParser#var.
-    def enterVar(self, ctx:CompiladorParser.VarContext):
+    # Enter a parse tree produced by CompiladorParser#dvar.
+    def enterDvar(self, ctx:CompiladorParser.DvarContext):
         pass
 
-    # Exit a parse tree produced by CompiladorParser#var.
-    def exitVar(self, ctx:CompiladorParser.VarContext):
+    # Exit a parse tree produced by CompiladorParser#dvar.
+    def exitDvar(self, ctx:CompiladorParser.DvarContext):
         pass
 
 

@@ -1,4 +1,4 @@
-# Generated from Compilador.e4 by ANTLR 4.8
+# Generated from Compilador.e4 by ANTLR 4.9.2
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -44,9 +44,9 @@ class CompiladorParser ( Parser ):
 
     RULE_programa = 0
     RULE_classe = 1
-    RULE_var = 2
+    RULE_dvar = 2
 
-    ruleNames =  [ "programa", "classe", "var" ]
+    ruleNames =  [ "programa", "classe", "dvar" ]
 
     EOF = Token.EOF
     T__0=1
@@ -60,7 +60,7 @@ class CompiladorParser ( Parser ):
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
-        self.checkVersion("4.8")
+        self.checkVersion("4.9.2")
         self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
         self._predicates = None
 
@@ -68,6 +68,7 @@ class CompiladorParser ( Parser ):
 
 
     class ProgramaContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -126,6 +127,7 @@ class CompiladorParser ( Parser ):
 
 
     class ClasseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -134,11 +136,11 @@ class CompiladorParser ( Parser ):
         def ID(self):
             return self.getToken(CompiladorParser.ID, 0)
 
-        def var(self, i:int=None):
+        def dvar(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(CompiladorParser.VarContext)
+                return self.getTypedRuleContexts(CompiladorParser.DvarContext)
             else:
-                return self.getTypedRuleContext(CompiladorParser.VarContext,i)
+                return self.getTypedRuleContext(CompiladorParser.DvarContext,i)
 
 
         def getRuleIndex(self):
@@ -171,7 +173,7 @@ class CompiladorParser ( Parser ):
             self.state = 17
             self.match(CompiladorParser.T__2)
             self.state = 18
-            self.var()
+            self.dvar()
             self.state = 23
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -179,7 +181,7 @@ class CompiladorParser ( Parser ):
                 self.state = 19
                 self.match(CompiladorParser.T__3)
                 self.state = 20
-                self.var()
+                self.dvar()
                 self.state = 25
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -197,7 +199,8 @@ class CompiladorParser ( Parser ):
         return localctx
 
 
-    class VarContext(ParserRuleContext):
+    class DvarContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -210,23 +213,23 @@ class CompiladorParser ( Parser ):
                 return self.getToken(CompiladorParser.ID, i)
 
         def getRuleIndex(self):
-            return CompiladorParser.RULE_var
+            return CompiladorParser.RULE_dvar
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterVar" ):
-                listener.enterVar(self)
+            if hasattr( listener, "enterDvar" ):
+                listener.enterDvar(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitVar" ):
-                listener.exitVar(self)
+            if hasattr( listener, "exitDvar" ):
+                listener.exitDvar(self)
 
 
 
 
-    def var(self):
+    def dvar(self):
 
-        localctx = CompiladorParser.VarContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 4, self.RULE_var)
+        localctx = CompiladorParser.DvarContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 4, self.RULE_dvar)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 29
